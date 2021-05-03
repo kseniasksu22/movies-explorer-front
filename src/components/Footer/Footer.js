@@ -11,9 +11,9 @@ function Footer () {
            <div className="footer-wrapper">
                <p className="footer__prod-year">&#169; 2021</p>
                <ul className="footer__navlinks">
-                   <li className="footer__item"><a className="footer__link" href='https://praktikum.yandex.ru'>ЯндексПрактикум</a></li>
-                   <li className="footer__item"><a className="footer__link" href='https://github.com/kseniasksu22'>GitHub</a></li>
-                   <li className="footer__item"><a className="footer__link" href='https://www.facebook.com/'>Facebook</a></li>
+                   <li className="footer__item"><a className="footer__link" href='https://praktikum.yandex.ru'target="_blank" rel="noreferrer">ЯндексПрактикум</a></li>
+                   <li className="footer__item"><a className="footer__link" href='https://github.com/kseniasksu22'target="_blank" rel="noreferrer">GitHub</a></li>
+                   <li className="footer__item"><a className="footer__link" href='https://www.facebook.com/'target="_blank" rel="noreferrer">Facebook</a></li>
                </ul>
            </div>
            </div>
