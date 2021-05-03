@@ -1,0 +1,88 @@
+.movies-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F4F4F4;
+    padding: 4.5px 6px 4.5px 22px;
+}
+
+.movies-card__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    margin: 0px;
+    padding: 22px 0px 13px 0px;
+}
+.movies-card__duration {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color:  #A0A0A0;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.movies-card__pic {
+    width: 14px;
+    height: 12px;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    padding-bottom: 18px;
+    background-color: transparent;
+}
+.movies-card__pic:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.movies-card__logo {
+    width: 220px;
+    height: 122px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.movies-card__pic-like {
+    background-image: url("../../images/emptyheart.svg");
+}
+.movies-card__pic_filled {
+    background-image: url("../../images/redheart.svg");
+}
+.movies-card__pic-delete {
+    background-image: url("../../images/delete.svg");
+}
+@media screen and (max-width: 400px) {
+    .movies-card {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0px;
+    }
+    .movies-card__logo {
+        width: 100%;
+        height: 168px;
+    }
+    .movies-card-wrapper {
+        padding:14px 12px;
+    }
+    .movies-card__title {
+        padding: 0px 0px 8px 0px;
+        font-size: 12px;
+        line-height: 15px;
+       
+    }
+    .movies-card__pic {
+        float: right;
+        padding: 0px;
+        margin-top: -35px;
+        padding-right: 18px;
+    }
+    .movies-card__duration  {
+    padding: 0px;
+    }
+}
