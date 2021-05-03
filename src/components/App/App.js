@@ -51,7 +51,7 @@ function App() {
   <Route path="/sign-in"><Login/></Route>
   <Route path="/sign-up"><Register/></Route>
   <Route path="/profile"><Profile></Profile></Route>
-  <Route path="/not-found"><NotFoundPage></NotFoundPage></Route>
+  <Route path="*"><NotFoundPage></NotFoundPage></Route>
    </Switch>
    <Navigation isOpen={popupOpen} onNavBar={closePopup} onClosePopup={closePopup}/>
    <Footer/>
