@@ -7,7 +7,7 @@ function Portfolio () {
             <ul className="portfolio-wrapper">
                 <li className="portfolio__item"><a className="portfolio__link" href="#">Статичный сайт</a> <a className="portfolio__link-logo" href="#"> <img className="portfolio__link-pointer" src={LinkLogo} alt="Стрелка"/></a></li>
                 <li className="portfolio__item"><a className="portfolio__link" href="#">Адаптивный сайт</a> <a className="portfolio__link-logo" href="#"> <img className="portfolio__link-pointer" src={LinkLogo} alt="Стрелка"/></a></li>
-                <li className="portfolio__item"><a className="portfolio__link" href="#">Одностраничное приложение</a> <a className="portfolio__link-logo" href="#"> <img className="portfolio__link-pointer" src={LinkLogo} alt="Стрелка"/></a></li>
+                <li className="portfolio__item"><a className="portfolio__link" href="https://github.com/kseniasksu22/react-mesto-api-full/settings">Одностраничное приложение</a> <a className="portfolio__link-logo" href="#"> <img className="portfolio__link-pointer" src={LinkLogo} alt="Стрелка"/></a></li>
             </ul>
         </div>
     )
