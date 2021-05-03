@@ -1,0 +1,112 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+    -moz-transition: visibility 0.5s, opacity 0.5s linear;
+    -ms-transition: visibility 0.5s, opacity 0.5s linear;
+    -o-transition: visibility 0.5s, opacity 0.5s linear;
+}
+.navigation_visible {
+    visibility: visible;
+    opacity: 1;
+}
+.navigation-container {
+    background-color: #FAFAFA;
+    width: 520px;
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-right: 22.4px;
+    padding-bottom: 90px;
+}
+.navigation__button-close {
+    background-image: url("../../images/close.svg");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    align-self: flex-end;
+    padding: 0px;
+
+}
+.navigation__button-close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.navigation-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 123px;
+    gap: 24px;
+    padding-bottom: 621px;
+
+}
+.navigation__link {
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+.navigation__link:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+    cursor: pointer;
+
+}
+.navigation__link-profile {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    border: 2px solid #AAAAAA;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: black;
+}
+.navigation__icon {
+    padding-right: 7px;
+}
+
+.navigation_span {
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 520px) {
+    .navigation-container {
+        width: 100%;
+        height: 100%;
+    }
+    .navigation-wrapper {
+        padding-bottom: 430px;
+        padding-top: 99.4px;
+
+    }
+    .navigation__button-close {
+        padding-right: 45px;
+        margin-top: 10px;
+    }
+}

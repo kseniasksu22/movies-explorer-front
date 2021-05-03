@@ -1,0 +1,105 @@
+.filter-checkbox {
+    padding-left: 29px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.filter-checkbox__text {
+    text-align: center;
+    padding-left: 14px;
+    margin: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.filter-checkbox__capsule {
+    display: block;
+    width: 36px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #f74040;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: pointer;
+}
+  
+  .filter-checkbox__round {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+  .filter-checkbox__capsule:checked {
+    animation-name:toggle-on;
+    animation-duration:400ms;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+  }
+  
+  .filter-checkbox__capsule:not(:checked) {
+    animation-name:toggle-off;
+    animation-duration:400ms;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+  }
+  
+ .filter-checkbox__input:checked ~ .filter-checkbox__capsule {
+    background-color: #2BE080;
+  }
+ .filter-checkbox__input:checked ~ .filter-checkbox__capsule .filter-checkbox__round {
+    animation-name:toggle;
+    animation-duration:200ms;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-out;
+  }
+  
+  .filter-checkbox__input:not(:checked) ~ .filter-checkbox__capsule .filter-checkbox__round {
+    animation-name:toggle-back;
+    animation-duration:200ms;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in-out;
+    animation-direction:reverse;
+  }
+  
+  @keyframes toggle-back {
+    0% {
+      margin-left: 2px;
+    }
+  
+      100% {
+        margin-left: 17px;
+
+      }
+  }
+  
+  @keyframes toggle {
+      0% {
+      margin-left: 2px;
+      }
+      100% {
+        margin-left: 17px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .filter-checkbox {
+        padding-left: 0px;
+    }
+    .filter-checkbox__text {
+      font-size: 11px;
+      line-height: 18px;
+  }
+    }
