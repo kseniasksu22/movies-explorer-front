@@ -6,17 +6,11 @@ function SearchForm() {
         <div className="search-form">   
      <form className="search-form-container">
            <img className="search-form__icon" src={SearchIcon} alt="Поиск"/>  
-  
-                <input
-            className="search-form__input"
-            placeholder="Фильм"
-          />
+             <input className="search-form__input" placeholder="Фильм" required/>
              <button className="search-form__button" type="submit">Найти</button>
-    
      <div className="search-form-fil"><FilterCheckbox/></div>
-    
     </form>
-    <div className="search-form-filterbox-container"><FilterCheckbox/></div>
+         <div className="search-form-filterbox-container"><FilterCheckbox/></div>
         </div>
     )
 }

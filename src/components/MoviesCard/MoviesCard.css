@@ -27,10 +27,9 @@
     padding-bottom: 20px;
 }
 
-.movies-card__like {
+.movies-card__pic {
     width: 14px;
     height: 12px;
-    background-image: url("../../images/emptyheart.svg");
     border: none;
     outline: none;
     background-repeat: no-repeat;
@@ -38,7 +37,7 @@
     padding-bottom: 18px;
     background-color: transparent;
 }
-.movies-card__like:hover {
+.movies-card__pic:hover {
     cursor: pointer;
     opacity: 0.6;
 }
@@ -49,8 +48,14 @@
     align-self: center;
 }
 
-.movies-card__like_filled {
+.movies-card__pic-like {
+    background-image: url("../../images/emptyheart.svg");
+}
+.movies-card__pic_filled {
     background-image: url("../../images/redheart.svg");
+}
+.movies-card__pic-delete {
+    background-image: url("../../images/delete.svg");
 }
 @media screen and (max-width: 400px) {
     .movies-card {
@@ -71,7 +76,7 @@
         line-height: 15px;
        
     }
-    .movies-card__like {
+    .movies-card__pic {
         float: right;
         padding: 0px;
         margin-top: -35px;
