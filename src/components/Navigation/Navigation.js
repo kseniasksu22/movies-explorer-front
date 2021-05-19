@@ -8,7 +8,7 @@ function Navigation (props) {
         <div className="navigation-container">
             <button className="navigation__button-close" onClick={props.onNavBar}></button>
             <div className="navigation-wrapper">
-            <Link to="/main" className="navigation__link">Главная</Link>
+            <Link to="/" className="navigation__link">Главная</Link>
             <Link to="/movies" className="navigation__link">Фильмы</Link>
             <Link to="/saved-movies" className="navigation__link">Сохранённые фильмы</Link>
         </div>

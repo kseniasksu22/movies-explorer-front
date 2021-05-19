@@ -25,6 +25,16 @@
     cursor: pointer;
     opacity: 0.6;
 }
+.movies-card-list__button_hidden {
+    display: none;
+}
+
+.movies-card-list__text {
+    color: grey;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
 
 @media screen and (max-width: 400px) {
     .movies-card-list {

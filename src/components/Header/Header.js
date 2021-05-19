@@ -1,19 +1,31 @@
 import './Header.css';
 import HeaderLogo from "../../images/header-logo.svg";
 import HeaderMainLogo from "../../images/icon-main.svg";
+import React from "react";
+import { Link, Route, Switch} from "react-router-dom";
+import { createBrowserHistory } from "history";
 
-import { Link, Route, Switch } from "react-router-dom";
 function Header(props) {
+  const history = createBrowserHistory();
     return (
-      <header className="header">
+            <header className="header">
      
      <Switch>
        <Route exact path="/">
          <div className="header-container header-main">
        <img className="header__logo" src={HeaderLogo} alt="Лого"/>
      <div className="header-wrapper">
-         <Link to="/sign-up" className="header__nav-link">Регистрация</Link>
+        {!props.isLogged ? (
+        <>
+        <Link to="/sign-up" className="header__nav-link">Регистрация</Link>
          <Link to="/sign-in" className="header__button">Войти</Link>
+         </>)
+        : (<>
+        <button className="haeder__button-back" onClick={()=>{history.goBack()}}> Назад </button>
+        <button className="header__button-exit" onClick={props.onExit}>Выйти</button>
+        </>
+        )
+        }
      </div>
      </div>
      </Route>
@@ -25,7 +37,7 @@ function Header(props) {
        <Link to="/saved-movies" className="header__selected-films-link">Сохраненные фильмы</Link>
        <Link to="/profile" className="header__account-link"><img className="header__icon" src={HeaderMainLogo} alt="Иконка"/>Аккаунт</Link>
        </div>
-       <Link className="header__navbar-link" onClick={props.onNavbarPopup}></Link>
+       <button className="header__navbar-link" onClick={props.onNavbarPopup}></button>
        </div>
      </Route>
      <Route path="/profile">
@@ -36,7 +48,7 @@ function Header(props) {
        <Link to="/saved-movies" className="header__selected-films-link">Сохраненные фильмы</Link>
        <Link to="/profile" className="header__account-link"><img className="header__icon" src={HeaderMainLogo} alt="Иконка"/>Аккаунт</Link>
        </div>
-       <Link className="header__navbar-link" onClick={props.onNavbarPopup}></Link>
+       <button className="header__navbar-link" onClick={props.onNavbarPopup}></button>
        </div>
      </Route>
      <Route path="/saved-movies">
@@ -47,7 +59,7 @@ function Header(props) {
        <Link to="/saved-movies" className="header__selected-films-link">Сохраненные фильмы</Link>
        <Link to="/profile" className="header__account-link"><img className="header__icon" src={HeaderMainLogo} alt="Иконка"/>Аккаунт</Link>
        </div>
-       <Link className="header__navbar-link" onClick={props.onNavbarPopup}></Link>
+       <button className="header__navbar-link" onClick={props.onNavbarPopup}></button>
        </div>
      </Route>
      </Switch>

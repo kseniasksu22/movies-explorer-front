@@ -10,13 +10,13 @@ function AuthForm (props) {
         <form className={`auth-form-wrapper ${props.class}`}>
             {props.children}
              <label className="auth-form__label" htmlFor="">Е-mail</label>
-        <input type="email" className="auth-form__input-email auth-form__input" htmlFor="email" id="email" name="email" required/>
-        <span className="auth-form__error">Что-то пошло не так</span>
+        <input type="email" className="auth-form__input-email auth-form__input" htmlFor="email" id="email" name="email" onChange={props.onEmailInputChange} value={props.onEmailValue} onBlur={props.onEmailBlur} required/>
+        <span className="auth-form__error">{props.emailError}</span>
              <label className="auth-form__label" htmlFor="password">Пароль</label>
-        <input type="password" className="auth-form__input-password auth-form__input" htmlFor="password" id="password" name="password" required/>
-        <span className="auth-form__error">Что-то пошло не так</span>
+        <input type="password" className="auth-form__input-password auth-form__input" htmlFor="password" id="password" name="password" onChange={props.onPasswordInputChange} value={props.onPasswordValue} onBlur={props.onPasswordBlur} required/>
+        <span className="auth-form__error">{props.passwordError}</span>
         </form>
-        <button className="auth-form__button">{props.buttonText}</button>
+        <button type="submit" className="auth-form__button " onClick={props.onLogin}>{props.buttonText}</button>
         <p className="auth-form__link-text"> {props.linkText} <Link to={props.onLog} className="auth-form__link">{props.logText}</Link></p>
     </div>
     )
