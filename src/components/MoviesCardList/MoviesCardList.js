@@ -14,6 +14,7 @@ const handleChange = (e) => {
          e.target.classList.add("movies-card-list__button_hidden")
         }
 }
+
 React.useEffect(() => {
         setMoviesToRender(props.movieFinded.slice(0, numberMoviesToAdd));
         if (props.movieFinded.length <= numberMoviesToAdd) {
@@ -30,7 +31,7 @@ React.useEffect(() => {
              {moviesToRender.map((item)=>{
               return <MoviesCard datamov={item} addMovies={props.addMovies} key={item.id}  deleteSMovieSaved={props.deleteSMovieSaved} isLiked={props.isLiked}/>  
  }) 
-   }
+ }
              { props.isEmpty ? "" : <span className="movies-card-list__text">Похоже, ничего не найдено. Попробуйте ввести другое слово или просто букву</span> }
          </Route>
          <Route path="/saved-movies">
