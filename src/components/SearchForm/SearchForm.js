@@ -19,7 +19,6 @@ const handleChange = (e) => {
   const handleSavedMovieSubmit = (e) => {
        e.preventDefault();
        const checked = e.target.form.hidcheck.checked;
-       console.log(checked);
         props.onSavedSearch(text,checked);
      
   }

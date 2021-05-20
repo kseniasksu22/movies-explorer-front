@@ -155,7 +155,6 @@ function App() {
           });
           localStorage.setItem('moviesSaved', JSON.stringify(moviesSavedStorige));
           setSavedMovies(moviesSavedStorige);
-          // new new new
           const chaneMovies = movies.map(
               (c) => (c.id === movie.id ? Object.assign(c, {
                   saved: true
