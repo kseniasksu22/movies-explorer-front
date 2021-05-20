@@ -101,17 +101,13 @@ function App() {
       }
   }, [])
   const handleMovieSearch = (text, checked) => {
-      let dataSave = JSON.parse(localStorage.getItem('moviesSaved'));
+      let dataSave = JSON.parse(localStorage.getItem('allMovies'));
       setIsSearched(true);
       let data = movies.filter((item) => {
           const movieCardName = item.nameRU || item.nameEn;
-          if (!movieCardName.match(text)) {
-              setIsContainerEmpty(false);
-          } else {
-              setIsContainerEmpty(true)
-          }
           return movieCardName.match(text)
       });
+      data[0] ? setIsContainerEmpty(true) : setIsContainerEmpty(false);
       data = handleShortFilm(data, checked);
       const newMovies = data.map(
           (item) => {
@@ -226,7 +222,7 @@ function App() {
               }
           });
   }
-  
+
   const tokenCheck = React.useCallback(() => {
       const token = localStorage.getItem("token");
       if (token) {
