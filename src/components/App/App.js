@@ -124,7 +124,9 @@ function App() {
           const moviesArraySaved = JSON.parse(localStorage.getItem("moviesSaved"));
           if (moviesArray) {
              setFinedMovies(checkerSaved(moviesArray, moviesArraySaved));
+             setIsSearched(true);
           }
+
       
   }, []);
  
