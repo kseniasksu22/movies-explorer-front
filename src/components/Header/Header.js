@@ -2,11 +2,11 @@ import './Header.css';
 import HeaderLogo from "../../images/header-logo.svg";
 import HeaderMainLogo from "../../images/icon-main.svg";
 import React from "react";
-import { Link, Route, Switch} from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { Link, Route, Switch, useHistory} from "react-router-dom";
+
 
 function Header(props) {
-  const history = createBrowserHistory();
+  const history = useHistory();
     return (
             <header className="header">
      
@@ -21,7 +21,7 @@ function Header(props) {
          <Link to="/sign-in" className="header__button">Войти</Link>
          </>)
         : (<>
-        <button className="haeder__button-back" onClick={()=>{history.goBack()}}> Назад </button>
+        <button className="haeder__button-back" onClick={()=>{history.push("/movies")}}> Назад к поиску</button>
         <button className="header__button-exit" onClick={props.onExit}>Выйти</button>
         </>
         )
