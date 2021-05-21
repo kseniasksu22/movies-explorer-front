@@ -123,10 +123,7 @@ function App() {
      const moviesArray = JSON.parse(localStorage.getItem("allMovies"));
           const moviesArraySaved = JSON.parse(localStorage.getItem("moviesSaved"));
           if (moviesArray) {
-            
              setFinedMovies(checkerSaved(moviesArray, moviesArraySaved));
-             setIsSearched(true);
-             
           }
       
   }, []);
@@ -346,6 +343,7 @@ function App() {
             >
          </ProtectedRoute>
       </Route>
+     
       </>
       )}
       <Route path="/sign-in">
@@ -356,9 +354,8 @@ function App() {
          <Register  handleRegister={handleRegister} message={message} setMsg={()=>
          {setMessage("")}}/>
       </Route>
-      <Route path="*">
-         <NotFoundPage></NotFoundPage>
-      </Route>
+      
+      <Route component={NotFoundPage} />
    </Switch>
    <Navigation isOpen={popupOpen} onNavBar={closePopup} onClosePopup={closePopup}/>
    <Footer/>
