@@ -1,6 +1,17 @@
 .profile-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'input input'
+    'eror eror'
+    ' secondinput secondinput'
+    'seconderror seconderror';
+}
+.profile__text-name_area {
+    grid-area: input;
+
+}
+.profile__error-name_area {
+    grid-area: eror;
 }
 .profile {
     display: flex;
@@ -10,12 +21,20 @@
     padding: 74px 0px 70px 0px;
 }
 .profile__text {
+    z-index: 5;
     margin: 0px;
+    width: 50px;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
+}
+.profile__item_grid-area {
+    grid-area: secondinput;
+}
+.profile__text_position {
+    grid-area: secondinput;
 }
 .profile__item {
     border: none;
@@ -26,6 +45,10 @@
     font-size: 11px;
     line-height: 13px;
     text-align: end;
+    
+}
+.profile__item_area {
+    grid-area: input;
 }
 .profile__greeting {
     font-family: Inter;
@@ -39,7 +62,6 @@
 }
 .profile__item_line {
    border-bottom: 1px solid #E8E8E8;
-   margin-bottom: 16px;
    padding-bottom: 16px;
 }
 .profile__edit {
@@ -74,7 +96,19 @@
 .profile__exit:hover {
     opacity: 0.6;
 }
+.profile__edit_unactive {
+    color: #A0A0A0;
+    pointer-events: none;
+}
 
+.profile__error {
+    font-size: 13px;
+    visibility: hidden;
+}
+.profile__error_visible{
+    color: red;
+    visibility: visible;
+}
 @media screen and (max-width: 790px) {
     .profile {
         padding: 236px 0px 271px 0px;

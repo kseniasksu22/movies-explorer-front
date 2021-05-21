@@ -22,6 +22,7 @@ const handleChange = (e) => {
         props.onSavedSearch(text,checked);
      
   }
+
     return (
         <div className="search-form">   
      <form className="search-form-container">
